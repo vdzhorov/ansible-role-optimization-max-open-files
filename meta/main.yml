@@ -1,0 +1,17 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  author: vdzhorov
+  description: Ansible role for setting max open files on Linux host
+  company: "Delta.BG"
+  license: "license (MIT)"
+  min_ansible_version: 2.0
+  platforms:
+    - all
+  galaxy_tags:
+    - linux
+    - sysctl
+    - optimization
+    - max_open_files
