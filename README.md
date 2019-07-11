@@ -1,6 +1,9 @@
 # ansible-role-optimization-max-open-files
 
-Ansible role for setting max open files on Linux host
+Ansible role for setting max open files on Linux host. This rile sets correct values in:
+
+* /etc/security/limits.conf
+* /etc/sysctl.conf
 
 ### Prerequisites
 
