@@ -1,0 +1,28 @@
+---
+
+- name: Set sysctl limit for fs.file-max
+  sysctl:
+    name: 'fs.file-max'
+    value: '{{ fs_file_max }}'
+    state: present
+    sysctl_set: yes
+
+- name: Set PAM limits for nproc in /etc/security/limits.conf
+  pam_limits:
+    domain: '*'
+    limit_type: '{{ item }}'
+    limit_item: 'nproc'
+    value: '{{ fs_file_max }}'
+  loop:
+    - 'soft'
+    - 'hard'
+
+- name: Set PAM limits for nofile in /etc/security/limits.conf
+  pam_limits:
+    domain: '*'
+    limit_type: '{{ item }}'
+    limit_item: 'nofile'
+    value: '{{ fs_file_max }}'
+  loop:
+    - 'soft'
+    - 'hard'
