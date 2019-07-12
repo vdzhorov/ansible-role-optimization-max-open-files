@@ -9,9 +9,17 @@ galaxy_info:
   license: "license (MIT)"
   min_ansible_version: 2.0
   platforms:
-    - all
+    - name: EL
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
   galaxy_tags:
     - linux
     - sysctl
     - optimization
-    - max_open_files
+    - maxopenfiles
